@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Import helper functions
-source submission/functions.sh
+source functions.sh
 
 # Week One Exercise: Bitcoin Address Generation and Transaction Verification
 # This script demonstrates using the key concepts from previous exercises in a practical scenario
@@ -22,7 +22,7 @@ echo "----------------------------------------"
 echo "Create a wallet named 'btrustwallet' to track your Bitcoin exploration"
 # STUDENT TASK: Use bitcoin-cli to create a wallet named "btrustwallet"
 # WRITE YOUR SOLUTION BELOW:
-bitcoin-cli  -regtest createwallet btrustwallet
+bitcoin-cli  -regtest createwallet "btrustwallet"
 
 
 # Create a second wallet that will hold the treasure

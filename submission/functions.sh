@@ -116,3 +116,4 @@ trim() {
   var="${var%"${var##*[![:space:]]}"}"
   printf '%s' "$var"
 }
+

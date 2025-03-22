@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Import helper functions
-source functions.sh
+source submission/functions.sh
 
 # Week One Exercise: Bitcoin Address Generation and Transaction Verification
 # This script demonstrates using the key concepts from previous exercises in a practical scenario
@@ -14,7 +14,7 @@ set -e
 # ========================================================================
 
 # Set up the challenge scenario
-# setup_challenge
+setup_challenge
 
 # CHALLENGE PART 1: Create a wallet to track your discoveries
 echo "CHALLENGE 1: Create your explorer wallet"
@@ -34,7 +34,7 @@ bitcoin-cli -regtest createwallet "treasurewallet"
 # Generate an address for mining in the treasure wallet
 # STUDENT TASK: Generate a new address in the treasurewallet
 # WRITE YOUR SOLUTION BELOW:
-TREASURE_ADDR=TREASURE_ADDR=$(bitcoin-cli -regtest -rpcwallet=treasurewallet getnewaddress)
+TREASURE_ADDR=$(bitcoin-cli -regtest -rpcwallet=treasurewallet getnewaddress)
 check_cmd "Address generation"
 echo "Mining to address: $TREASURE_ADDR"
 
